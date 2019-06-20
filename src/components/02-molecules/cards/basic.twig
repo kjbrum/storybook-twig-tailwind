@@ -1,0 +1,22 @@
+{#
+    Basic Card
+    ---
+    Usage:
+    {% include 'components/molecules/cards/basic' with {
+        link: 'http://example.com',
+        image: {
+            url: 'path/to/image.png',
+            alt: 'Alt Text'
+        },
+        title: 'My Basic Card',
+        description: 'Short description...'
+    } %}
+#}
+
+<a href="{{ link }}" class="card card--basic group block overflow-hidden cursor-pointer font-normal rounded border border-gray-700 bg-white hover:border-gray-500">
+    <img src="{{ image.url }}" alt="{{ image.alt }}" class="w-full">
+    <div class="p-6">
+        <div class="h3 mb-0 group-hover:text-gray-500">{{ title }}</div>
+        <p class="text-gray-500">{{ description }}</p>
+    </div>
+</a>

@@ -1,0 +1,33 @@
+// Buttons
+// ------------------------
+.button {
+    @apply inline-block;
+    @apply py-4;
+    @apply px-8;
+    @apply text-center;
+    @apply font-bold;
+    @apply text-lg;
+    @apply no-underline;
+    @apply text-gray-700;
+    @apply border-2;
+    @apply border-gray-300;
+    @apply bg-gray-300;
+    @apply cursor-pointer;
+
+    &:hover {
+        @apply text-gray-900;
+        @apply border-gray-400;
+        @apply bg-gray-400;
+    }
+}
+
+.button-outline {
+    @apply border-gray-700;
+    @apply bg-transparent;
+
+    &:hover {
+        @apply text-gray-900;
+        @apply border-gray-900;
+        @apply bg-gray-300;
+    }
+}

@@ -1,0 +1,18 @@
+{#
+    Employee Card
+    ---
+    Usage:
+    {% include 'components/molecules/cards/employee' with {
+        position: 'CEO',
+        name: 'First Last',
+        description: 'Short description...',
+        email: 'example@domain.com'
+    } %}
+#}
+
+<div class="card card--employee block p-4 rounded border bg-white">
+    <small class="text-xs">{{ position }}</small>
+    <div class="h4 mb-2">{{ name }}</div>
+    <p>{{ description }}</p>
+    <a href="mailto:{{ email }}">Send Email &rarr;</a>
+</div>

@@ -1,0 +1,91 @@
+// Base
+// ------------------------
+html {
+    @apply font-sans;
+    @apply text-gray-700;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+    @apply h-px;
+    @apply my-4;
+    @apply border-t;
+}
+
+
+// Typography
+// ------------------------
+p {
+    @apply mb-4;
+
+    &:last-child {
+        @apply mb-0;
+    }
+}
+
+a {
+    @apply text-gray-500;
+    @apply font-bold;
+    @apply no-underline;
+    // transition: 0.15s ease-in-out;
+
+    &:hover {
+        @apply text-gray-700;
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    @apply font-bold;
+    @apply text-gray-800;
+    @apply mb-4;
+}
+
+.h1 {
+    @apply text-5xl;
+}
+
+.h2 {
+    @apply text-4xl;
+}
+
+.h3 {
+    @apply text-3xl;
+}
+
+.h4 {
+    @apply text-xl;
+}
+
+
+// Forms
+// ------------------------
+input:not([type="submit"]),
+textarea,
+select {
+    @apply w-full;
+    @apply p-2;
+    @apply border;
+    @apply bg-white;
+
+    &:hover {
+        @apply border-gray-500;
+    }
+}
+
+textarea {
+    @apply h-32;
+}
+
+select {
+    @apply rounded-none;
+    // @apply appearance-none;
+}

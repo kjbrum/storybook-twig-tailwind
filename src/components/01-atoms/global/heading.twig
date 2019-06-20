@@ -1,0 +1,11 @@
+{#
+    Heading
+    ---
+    Usage:
+    {% include "components/atoms/global/heading" with {
+        type: "h1",
+        text: "Heading 1"
+    } %}
+#}
+
+<div class="{{ type|default('h1') }}">{{ text|default('Heading') }}</div>

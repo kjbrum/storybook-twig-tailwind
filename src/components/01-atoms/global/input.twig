@@ -1,0 +1,38 @@
+{#
+    Input
+    ---
+    Usage:
+    {% include "components/atoms/global/input" with {
+        type: 'tel',
+        label: "Phone Number",
+        value: "123-456-7890",
+        error: "",
+        isInline: false,
+        isRequired: false,
+        isDisabled: false,
+    } %}
+#}
+
+<div class="form-field {{ error ? 'has-error' }} {{ isDisabled|default ? 'opacity-50' }}">
+    <label for="input-field" class="font-bold {{ isInline ? 'screen-reader' }}">
+        {{ label|default }}{{ (isRequired|default) ? '*' }}
+    </label>
+
+    {%- set placeholder -%}
+        {{ label}}{{ (isRequired|default) ? '*' }}
+    {%- endset -%}
+
+    <input
+        id="input-field"
+        class="input {{ error ? 'border-red-600' }}"
+        value="{{ value }}"
+        type="{{ type|default('text') }}"
+        {{- isInline|default ? 'placeholder="' ~ placeholder ~ '"' -}}
+        {{- isDisabled|default ? ' disabled' -}}
+        {{- isRequired|default ? ' required' -}}
+    />
+
+    {% if error|default %}
+        <div class="text-sm text-red-600">{{ error }}</div>
+    {% endif %}
+</div>

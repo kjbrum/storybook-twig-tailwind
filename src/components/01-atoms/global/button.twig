@@ -1,0 +1,21 @@
+{#
+    Button
+    ---
+    Usage:
+    {% include "components/atoms/global/button" with {
+        type: "outline",
+        text: "Outline Button"
+    } %}
+#}
+
+{% if type == 'outline' %}
+   {% set btnClass = 'button-outline' %}
+{% elseif type == 'icon' %}
+   {% set btnClass = 'button-icon' %}
+{% else %}
+   {% set btnClass = '' %}
+{% endif %}
+
+<button class="button {{ btnClass }}">
+    {{ text|default('Button') }}
+</button>

@@ -1,0 +1,42 @@
+{
+  "name": "storybook-twig-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-storybook",
+    "build-storybook": "build-storybook -o dist/storybook",
+    "dev": "npm run storybook",
+    "storybook": "start-storybook -p 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "@storybook/addon-a11y": "^5.1.9",
+    "@storybook/addon-actions": "^5.1.9",
+    "@storybook/addon-knobs": "^5.1.9",
+    "@storybook/addon-links": "^5.1.9",
+    "@storybook/addon-notes": "^5.1.9",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@storybook/html": "^5.1.9",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "faker": "^4.1.0",
+    "node-sass": "^4.11.0",
+    "pixrem": "^5.0.0",
+    "postcss-flexibility": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "tailwindcss": "^1.0.4",
+    "twig": "^1.13.3",
+    "twig-loader": "^0.4.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
