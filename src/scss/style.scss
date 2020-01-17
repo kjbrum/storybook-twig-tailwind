@@ -1,38 +1,14 @@
 // Tailwind - Base
 // ------------------------
 @tailwind base;
-
-// Custom Base
-// ------------------------
 @import "base";
+
 
 // Tailwind - Components
 // ------------------------
 @tailwind components;
-
-
-// Custom
-// ------------------------
 @import "buttons";
-
-pre,
-code {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-}
-
-pre {
-    font-size: 0.8rem;
-    color: black;
-    background-color: #f5f5f5;
-    border-radius: 5px;
-}
-
-code {
-    overflow: scroll;
-    padding: 1rem;
-}
+@import "code";
 
 
 // Tailwind - Utilities
