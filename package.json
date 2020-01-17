@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-storybook",
+    "build": "yarn build-storybook",
     "build-storybook": "build-storybook -o dist/storybook",
-    "dev": "npm run storybook",
+    "dev": "yarn storybook",
     "storybook": "start-storybook -p 3000"
   },
   "keywords": [],
