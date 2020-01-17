@@ -1,10 +1,7 @@
-const tailwindcss = require('tailwindcss');
+const tailwindcss = require('tailwindcss')
 
 const purgecss = require('@fullhuman/postcss-purgecss')({
-    content: [
-        './src/components/**/*.twig',
-        './stories/**/*.js',
-    ],
+    content: ['./src/components/**/*.twig', './stories/**/*.js'],
     extractors: [
         {
             extractor: class {
@@ -12,8 +9,8 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
                     return content.match(/[A-Za-z0-9-_:/]+/g) || []
                 }
             },
-            extensions: ['twig', 'js']
-        }
+            extensions: ['twig', 'js'],
+        },
     ],
     whitelist: ['html', 'body', 'pre', 'code', 'hr'],
     whitelistPatterns: [],
@@ -21,10 +18,10 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 
 module.exports = {
     plugins: [
-        tailwindcss('./tailwind/tailwind.config.js'),
+        tailwindcss('./tailwind.config.js'),
         require('postcss-flexibility'),
         require('pixrem'),
         require('autoprefixer'),
-        ...process.env.NODE_ENV === 'production' ? [purgecss] : [],
-    ]
+        ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),
+    ],
 }

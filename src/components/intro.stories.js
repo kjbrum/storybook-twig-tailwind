@@ -12,6 +12,6 @@ const stories = storiesOf('Intro', module)
 stories.add('Overview', () => {
     return `
         <h1 class="h1">Storybook + Twig + Tailwind</h1>
-        <h2 class="h4">A collection of UI components.</h2>
+        <h2 class="h3">A collection of UI components.</h2>
     `
 })
