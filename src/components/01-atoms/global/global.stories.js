@@ -7,7 +7,7 @@ import button from '@atoms/global/button.twig'
 import input from '@atoms/global/input.twig'
 
 // Utilities
-import { componentOutput } from '@utilities'
+import { componentOutput } from '@utils'
 
 // Init stories
 const stories = storiesOf('Atoms/Global', module)

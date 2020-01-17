@@ -1,11 +1,12 @@
 {
-  "name": "storybook-twig-starter",
+  "name": "storybook-twig-tailwind",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "yarn build-storybook",
-    "build-storybook": "build-storybook -o dist/storybook",
+    "build-storybook": "build-storybook -c .storybook -o public",
+    "deploy": "now --prod",
     "dev": "yarn storybook",
     "storybook": "start-storybook -p 3000"
   },

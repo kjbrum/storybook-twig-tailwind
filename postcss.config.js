@@ -1,7 +1,7 @@
 const tailwindcss = require('tailwindcss')
 
 const purgecss = require('@fullhuman/postcss-purgecss')({
-    content: ['./src/components/**/*.twig', './stories/**/*.js'],
+    content: ['./src/components/**/*.twig', './src/components/**/*.js'],
     extractors: [
         {
             extractor: class {

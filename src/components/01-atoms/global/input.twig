@@ -14,7 +14,7 @@
 #}
 
 <div class="form-field {{ error ? 'has-error' }} {{ isDisabled|default ? 'opacity-50' }}">
-    <label for="input-field" class="font-bold {{ isInline ? 'screen-reader' }}">
+    <label for="input-field" class="font-bold {{ isInline ? 'sr-only' }}">
         {{ label|default }}{{ (isRequired|default) ? '*' }}
     </label>
 
@@ -24,7 +24,7 @@
 
     <input
         id="input-field"
-        class="input {{ error ? 'border-red-600' }}"
+        class="input {{ error ? ' border-red-600' }}"
         value="{{ value }}"
         type="{{ type|default('text') }}"
         {{- isInline|default ? 'placeholder="' ~ placeholder ~ '"' -}}
