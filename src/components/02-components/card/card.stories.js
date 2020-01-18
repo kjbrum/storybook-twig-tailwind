@@ -2,8 +2,8 @@ import { storiesOf } from '@storybook/html'
 import { text } from '@storybook/addon-knobs'
 
 // Twig components
-import basic from '@molecules/cards/basic.twig'
-import employee from '@molecules/cards/employee.twig'
+import basic from '@components/card/basic.twig'
+import employee from '@components/card/employee.twig'
 
 // Utilities
 import { componentOutput } from '@utils'
@@ -13,7 +13,7 @@ import { componentOutput } from '@utils'
 import Faker from 'faker'
 
 // Init stories
-const stories = storiesOf('Molecules/Cards', module)
+const stories = storiesOf('Components/Card', module)
 
 // -----
 

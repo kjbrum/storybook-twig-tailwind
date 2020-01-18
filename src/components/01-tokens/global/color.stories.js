@@ -1,22 +1,15 @@
 import { storiesOf } from '@storybook/html'
-import { text, boolean, select } from '@storybook/addon-knobs'
 
-// Twig components
-import heading from '@atoms/global/heading.twig'
-import button from '@atoms/global/button.twig'
-import input from '@atoms/global/input.twig'
-
-// Utilities
-import { componentOutput } from '@utils'
+// import { tw } from '@utils'
 
 // Init stories
-const stories = storiesOf('Atoms/Global', module)
+const stories = storiesOf('Tokens', module)
 
 // -----
 
 // Colors
 stories.add(
-    'Colors',
+    'Color',
     () => `
 <div>
 	<div class="h4 mb-0">Gray</div>
@@ -168,55 +161,4 @@ stories.add(
 	</div>
 </div>
 `
-)
-
-// Heading
-stories.add('Heading', () =>
-    componentOutput(
-        heading({
-            type: select('Type', ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'], 'h1'),
-            text: text('Text', 'Heading Text'),
-        })
-    )
-)
-
-// Button
-stories.add('Button', () =>
-    componentOutput(
-        button({
-            type: select(
-                'Type',
-                {
-                    Default: '',
-                    Outline: 'outline',
-                },
-                'default'
-            ),
-            text: text('Text', 'Button'),
-        })
-    )
-)
-
-// Input
-stories.add('Input', () =>
-    componentOutput(
-        input({
-            type: select(
-                'Type',
-                {
-                    Text: 'text',
-                    Email: 'email',
-                    Number: 'number',
-                    Telephone: 'tel',
-                },
-                'tel'
-            ),
-            label: text('Label', 'Phone Number'),
-            value: text('Value', ''),
-            error: text('Error', ''),
-            isInline: boolean('Inline', false),
-            isRequired: boolean('Required', false),
-            isDisabled: boolean('Disabled', false),
-        })
-    )
 )

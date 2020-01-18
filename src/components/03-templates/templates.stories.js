@@ -5,10 +5,10 @@ const stories = storiesOf('Templates/Example', module)
 
 // -----
 
-// TODO
+// Home
 stories.add(
-    'TODO',
+    'Home',
     () => `
-		<div>Templates will be displayed here...</div>
+		<div>Build a home template with components</div>
 	`
 )

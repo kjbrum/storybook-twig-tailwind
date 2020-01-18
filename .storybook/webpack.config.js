@@ -30,17 +30,18 @@ module.exports = async ({ config, mode }) => {
     // Custom alias'
     // Components
     const componentPath = path.resolve(__dirname, '../src/components')
-    config.resolve.alias['@atoms'] = `${componentPath}/01-atoms`
-    config.resolve.alias['@molecules'] = `${componentPath}/02-molecules`
-    config.resolve.alias['@organisms'] = `${componentPath}/03-organisms`
-    config.resolve.alias['@templates'] = `${componentPath}/04-templates`
-    config.resolve.alias['@pages'] = `${componentPath}/05-pages`
+    config.resolve.alias['@tokens'] = `${componentPath}/01-tokens`
+    config.resolve.alias['@components'] = `${componentPath}/02-components`
+    config.resolve.alias['@templates'] = `${componentPath}/03-templates`
 
     // SCSS
     config.resolve.alias['@scss'] = path.resolve(__dirname, '../src/scss')
 
     // Utilities
     config.resolve.alias['@utils'] = path.resolve(__dirname, '../utils')
+
+    // Project root
+    config.resolve.alias['@root'] = path.resolve(__dirname, '../')
 
     return config
 }
